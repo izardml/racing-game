@@ -1,13 +1,122 @@
 body {
+    position: relative;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 98vh;
+    font-family: 'Racing Sans One', cursive;
 }
 
-#container {
+#start {
     width: 960px;
     height: 600px;
     background-color: cornflowerblue;
+    display: flex;
+}
+
+#start #left,
+#start #right
+{
+    width: 50%;
+}
+
+#start #left h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#start #left #name {
+    margin: auto;
+    display: block;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.25rem;
+    padding: 1rem;
+    width: 60%;
+    border: none;
+    text-align: center;
+}
+
+#start #left button {
+    border: none;
+    font-family: 'Racing Sans One', cursive;
+    padding: 1rem 2rem;
+    background-color: #facc15;
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+    width: 60%;
+    font-size: 1.25rem;
+}
+
+#start #left button:hover {
+    background-color: #fde047;
+    cursor: pointer;
+}
+
+#start #right img {
+    width: 100%;
+    margin-top: 45%;
+}
+
+#game-ui {
+    display: none;
+    width: 960px;
+    height: 600px;
+    position: absolute;
+}
+
+#game-ui h2 {
+    margin-left: 1rem;
+}
+
+#game-over {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 960px;
+    height: 600px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+#content {
+    background-color: #252525;
+    color: white;
+    width: 600px;
+    height: 400px;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+#content h1 {
+    text-align: center;
+}
+
+#content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content ul {
+    list-style-type: none;
+}
+
+#content li {
+    font-size: 1.5rem;
+}
+
+#content button {
+    border: none;
+    background-color: #facc15;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 1.25rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+#content button:hover {
+    background-color: #fde047;
 }

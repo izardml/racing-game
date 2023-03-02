@@ -6,9 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Racing Game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
 </head>
-<body onload="startGame()">
-    <div id="container"></div>
+<!-- <body onload="startGame()"> -->
+<body>
+    <div id="start">
+        <section id="left">
+            <h1>Gim Resing</h1>
+
+            <form onsubmit="startGame()" action="javascript:void(0)">
+                <input type="text" id="name" value="" placeholder="Masukkan nama" required>
+                <button type="submit">Play</button>
+            </form>
+        </section>
+        <section id="right">
+            <img src="img/mobil.png" alt="Image">
+        </section>
+    </div>
+
+    <div id="game-ui">
+        <h2 id="playerName"></h2>
+        <h2 id="score"></h2>
+        <h2 id="speed"></h2>
+    </div>
+
+    <div id="game-over">
+        <div id="content">
+            <h1>Game Over</h1>
+            <h2>Result</h2>
+            <ul>
+                <li id="res-name">NAME: Nizar</li>
+                <li id="res-score">SCORE: 400</li>
+                <li id="res-time">TIME: 100 detik</li>
+            </ul>
+
+            <a href="."><button>Play Again</button></a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
