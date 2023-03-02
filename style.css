@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 98vh;
     font-family: 'Racing Sans One', cursive;
+    color: white;
 }
 
 #start {
@@ -59,6 +60,11 @@ body {
 #start #right img {
     width: 100%;
     margin-top: 45%;
+}
+
+#instruction {
+    margin-top: 3rem;
+    margin-left: 4rem;
 }
 
 #game-ui {
