@@ -74,8 +74,12 @@ body {
     position: absolute;
 }
 
-#game-ui h2 {
-    margin-left: 1rem;
+#game-ui .content {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
 }
 
 #game-over {

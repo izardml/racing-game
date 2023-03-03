@@ -22,8 +22,8 @@ function startGame() {
     myCar = new component(55, 120, 'img/myCar.png', 415, 450, 'image')
     myScore = new component('30px', 'Consolas', 'black', 10, 40, 'text')
 
-    leftField = new component(330, 600, 'transparent', 0, 0)
-    rightField = new component(330, 600, 'transparent', 630, 0)
+    leftField = new component(330, 600, 'img/crowd.png', 0, 0, 'background')
+    rightField = new component(330, 600, 'img/rightCrowd.png', 630, 0, 'background')
 
     theVoidA = new component(300, 25, 'transparent', 330, 750)
     theVoidB = new component(300, 25, 'transparent', 330, -150)
@@ -44,6 +44,7 @@ var myGameArea = {
         window.addEventListener('keydown', function(e) {
             myGameArea.keys = (myGameArea.keys || [])
             myGameArea.keys[e.keyCode] = true
+            console.log(myGameArea.keys)
         })
         window.addEventListener('keyup', function(e) {
             myGameArea.keys[e.keyCode] = false
@@ -57,7 +58,7 @@ var myGameArea = {
         document.getElementById('game-over').style.display = 'flex'
         document.getElementById('res-name').innerHTML = document.getElementById('playerName').innerText
         document.getElementById('res-score').innerHTML = document.getElementById('score').innerText
-        document.getElementById('res-time').innerHTML = 'TIME: ' + Math.floor(myGameArea.frameNo / 50) + ' detik'
+        // document.getElementById('res-time').innerHTML = 'TIME: ' + Math.floor(myGameArea.frameNo / 45) + ' detik'
     }
 }
 
@@ -196,7 +197,12 @@ function updateGameArea() {
         speed >= 0 ? speed -= 0.5 : ''
     }
 
+    speed >= 0 ? leftField.y += speed : leftField.y += 0
+    leftField.newPost()
     leftField.update()
+
+    speed >= 0 ? rightField.y += speed : rightField.y += 0
+    rightField.newPost()
     rightField.update()
 
     myCar.newPost()
