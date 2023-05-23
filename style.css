@@ -12,14 +12,15 @@ body {
 #start {
     width: 960px;
     height: 600px;
-    background-color: cornflowerblue;
+    background-color: #1f1f1f;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#start #left,
-#start #right
+#start #left
 {
-    width: 50%;
+    width: 70%;
 }
 
 #start #left h1 {
